@@ -52,7 +52,6 @@ explicit SharedPtr(SharedPtr&& r )
        {reset(r._adress);}
        return *this;
    }
-  
     // проверяет, указывает ли указатель на объект
     operator bool() const
     {
