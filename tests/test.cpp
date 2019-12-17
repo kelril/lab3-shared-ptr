@@ -16,7 +16,7 @@ TEST(SharedPtr, value )
     EXPECT_EQ(static_cast<int>(test._adress[0]), 9);
     test.swap(test2);
     EXPECT_EQ(static_cast<int>(test._adress[0]), 10);
-    SharedPtr<int>test3(&test);
+    SharedPtr<int> test3 = std::move(test);
     EXPECT_EQ(static_cast<int>(test3._adress[0]), 10);
 }
 int main(int argc, char **argv) {
