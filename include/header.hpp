@@ -29,11 +29,6 @@ explicit  SharedPtr(T* ptr)
     };
 explicit  SharedPtr(const SharedPtr& r)
 {_adress = r._adress; ++_adresses[reinterpret_cast<int64_t>(_adress)];}
-    SharedPtr(SharedPtr&& r)
-    {
-        _adress = r._adress; ++_adresses[reinterpret_cast<int64_t>(_adress)];
-    }
-
     ~SharedPtr()
     {
         --_adresses[reinterpret_cast<int64_t>(_adress)];
