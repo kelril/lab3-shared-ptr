@@ -44,7 +44,7 @@ explicit  SharedPtr(const SharedPtr& r)
             delete(_adress);
         }
     }
-explicit SharedPtr(SharedPtr&& r )
+SharedPtr(SharedPtr&& r )
 {_adress = r._adress; r._adress = nullptr;}
    auto operator=(SharedPtr& r) -> SharedPtr&
    {
